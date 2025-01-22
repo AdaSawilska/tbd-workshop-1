@@ -5,8 +5,8 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 1. Authors:
 
    Z5
-   Ada Sawilska 300466 \n
-   Amelia Tabor 300466
+   * Ada Sawilska 300466
+   * Amelia Tabor 300466
 
    https://github.com/AdaSawilska/tbd-workshop-1
    
