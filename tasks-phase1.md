@@ -5,7 +5,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 1. Authors:
 
    Z5
-   Ada Sawilska 300466
+   Ada Sawilska 300466 \n
    Amelia Tabor 300466
 
    https://github.com/AdaSawilska/tbd-workshop-1
@@ -13,6 +13,8 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 3. Follow all steps in README.md.
 
 4. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
+
+ ![img.png](figures/discounts.png)
 
   ![img.png](doc/figures/discounts.png)
 
