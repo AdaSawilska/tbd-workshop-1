@@ -32,13 +32,15 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
-    ***describe one selected module and put the output of terraform graph for this module here***
+    ![img.png](figures/terraform.png)
+
    
-9. Reach YARN UI
    
-   ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
+10. Reach YARN UI
    
-10. Draw an architecture diagram (e.g. in draw.io) that includes:
+   gcloud compute --project "tbd-2024l-300466" ssh --zone "europe-west1-b" "tbd-2024l-300466-notebook" -- -L 8080:localhost:8080
+   
+11. Draw an architecture diagram (e.g. in draw.io) that includes:
     1. VPC topology with service assignment to subnets
     2. Description of the components of service accounts
     3. List of buckets for disposal
@@ -46,7 +48,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
   
     ***place your diagram here***
 
-11. Create a new PR and add costs by entering the expected consumption into Infracost
+12. Create a new PR and add costs by entering the expected consumption into Infracost
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
 create a sample usage profiles and add it to the Infracost task in CI/CD pipeline. Usage file [example](https://github.com/infracost/infracost/blob/master/infracost-usage-example.yml) 
 
