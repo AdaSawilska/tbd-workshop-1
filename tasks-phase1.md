@@ -19,7 +19,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
   ![img.png](doc/figures/discounts.png)
 
 5. From avaialble Github Actions select and run destroy on main branch.
-![img.png](figures/destroy.png)
+  ![img.png](figures/destroy.png)
    
    
 7. Create new git branch and:
@@ -69,7 +69,9 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
   ```bash
   gcloud compute --project "tbd-2024l-300466" ssh --zone "europe-west1-b" "tbd-2024l-300466-notebook" -- -L 8080:localhost:8080
   ```
-     ![img.png](figures/notebook.png)
+
+
+  ![img.png](figures/notebook.png)
    
 15. Find and correct the error in spark-job.py
 
