@@ -81,16 +81,24 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 
     1. Add support for arbitrary machine types and worker nodes for a Dataproc cluster and JupyterLab instance
 
-    ***place the link to the modified file and inserted terraform code***
+    ```bash
+    https://github.com/AdaSawilska/tbd-workshop-1/commit/f50cbe9fb5d277e0c47892256a638dd89f5078f3
+    ```
     
-    3. Add support for preemptible/spot instances in a Dataproc cluster
+    2. Add support for preemptible/spot instances in a Dataproc cluster
 
-    ***place the link to the modified file and inserted terraform code***
+    ```bash
+    https://github.com/AdaSawilska/tbd-workshop-1/commit/76205e8b95433f9876cc2577c25c3e2234aa072d
+    ```
     
     3. Perform additional hardening of Jupyterlab environment, i.e. disable sudo access and enable secure boot
-    
-    ***place the link to the modified file and inserted terraform code***
+
+    ```bash
+    https://github.com/AdaSawilska/tbd-workshop-1/commit/2449c5c7b84f2ddc88512fecadea8c447cc25956
+    ```
 
     4. (Optional) Get access to Apache Spark WebUI
 
-    ***place the link to the modified file and inserted terraform code***
+    ```bash
+    https://github.com/AdaSawilska/tbd-workshop-1/commit/40cf04c8b8abcccafc1fee1fb425ad0b646c78e3
+    ```
