@@ -1,5 +1,4 @@
 # TBD Workshop 1.
-smol commit
 
 ## Workshop goals
 1. Learn how to provision computing resources for running Big Data analyses using the Infrastructure as Code (IaC) approach.
