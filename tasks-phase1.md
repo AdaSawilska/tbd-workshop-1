@@ -19,7 +19,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
   ![img.png](doc/figures/discounts.png)
 
 5. From avaialble Github Actions select and run destroy on main branch.
-
+![img.png](figures/destroy.png)
    
    
 7. Create new git branch and:
@@ -36,8 +36,9 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
    
    
 10. Reach YARN UI
-   
+   ```bash
    gcloud compute ssh tbd-cluster-m --project=tbd-2024l-300466 --zone=europe-west1-d --tunnel-through-iap -- -L 8088:localhost:8088
+   ```
    ![img.png](figures/hadoop.png)
    
 11. Draw an architecture diagram (e.g. in draw.io) that includes:
