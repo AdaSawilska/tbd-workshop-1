@@ -66,14 +66,16 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 
   
 13. Start an interactive session from Vertex AI workbench:
+  ```bash
   gcloud compute --project "tbd-2024l-300466" ssh --zone "europe-west1-b" "tbd-2024l-300466-notebook" -- -L 8080:localhost:8080
+  ```
      ![img.png](figures/notebook.png)
    
-14. Find and correct the error in spark-job.py
+15. Find and correct the error in spark-job.py
 
     ***describe the cause and how to find the error***
 
-15. Additional tasks using Terraform:
+16. Additional tasks using Terraform:
 
     1. Add support for arbitrary machine types and worker nodes for a Dataproc cluster and JupyterLab instance
 
