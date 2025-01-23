@@ -75,7 +75,7 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
    
 15. Find and correct the error in spark-job.py
 
-    ***describe the cause and how to find the error***
+    The path to the bucket in spark-job.py was incorrect
 
 16. Additional tasks using Terraform:
 
