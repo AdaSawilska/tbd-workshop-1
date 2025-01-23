@@ -34,3 +34,13 @@ variable "worker_nodes_number" {
   description = "Number of worker nodes"
 }
 
+variable "preemptible_num_instances" {
+  type        = number
+  default     = 0
+  description = "Number of preemptible instances for worker nodes"
+}
+variable "preemptibility" {
+  type        = string
+  default     = "PREEMPTIBLE"
+  description = "Specifies the preemptibility of the secondary workers"
+}
