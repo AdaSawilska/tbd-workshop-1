@@ -109,12 +109,7 @@ the running instance of your Vertex AI Workbench
 11. Add some 3 more [dbt tests](https://docs.getdbt.com/docs/build/tests) and explain what you are testing. ***Add new tests to your repository.***
 
    ***Code and description of your tests***
-
-   airflow_monitoring – checks the overall health of the Airflow environment (e.g. whether tasks are starting and executing according to schedule).
-
-  composer_sample_dbt_task – demonstrates integration with DBT (Data Build Tool), verifying whether data processing can be properly started and monitored using DBT in Airflow.
-
-  dataproc_job – tests the ability to delegate tasks to Dataproc, i.e. whether Airflow can properly establish communication and start jobs in the Dataproc cluster.
+   
 
 11. In main.tf update
    ```
