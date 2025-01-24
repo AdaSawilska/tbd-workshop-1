@@ -22,6 +22,7 @@ Worth to read:
 
 * Ada Sawilska 300466
 * Amelia Tabor 305379
+* Wiktor Wasilewski
 
  https://github.com/AdaSawilska/tbd-workshop-1
 
