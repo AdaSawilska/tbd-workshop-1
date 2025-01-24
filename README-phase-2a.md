@@ -91,13 +91,17 @@ the running instance of your Vertex AI Workbench
 
   In this step, the data was sent to cloud storage.
 
-    ![img.png](figures/zasobnik.png)
-     ![img.png](figures/table.png)
+   ![img.png](figures/zasobnik.png)
+
+    
+   ![img.png](figures/table.png)
    
 
 11. Using SparkSQL answer: how many table were created in each layer?
 
 ![img.png](figures/43table.png)
+
+
 ![img.png](figures/layertable.png)
 
 
