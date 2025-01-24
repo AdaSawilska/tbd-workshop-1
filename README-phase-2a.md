@@ -99,7 +99,7 @@ the running instance of your Vertex AI Workbench
 
 11. Using SparkSQL answer: how many table were created in each layer?
 
-![img.png](figures/43table.png)
+![img.png](figures/43tables.png)
 
 
 ![img.png](figures/layertable.png)
