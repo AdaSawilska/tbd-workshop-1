@@ -21,7 +21,7 @@ Worth to read:
    Z5
 
 * Ada Sawilska 300466
-* Amelia Tabor 
+* Amelia Tabor 305379
 
  https://github.com/AdaSawilska/tbd-workshop-1
 
