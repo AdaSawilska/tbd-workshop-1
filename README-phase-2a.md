@@ -18,20 +18,23 @@ Worth to read:
 
 2. Authors:
 
-   ***Enter your group nr***
+   Z5
 
-   ***Link to forked repo***
+* Ada Sawilska 300466
+* Amelia Tabor 
 
-3. Sync your repo with https://github.com/bdg-tbd/tbd-workshop-1.
+ https://github.com/AdaSawilska/tbd-workshop-1
 
-4. Provision your infrastructure.
+4. Sync your repo with https://github.com/bdg-tbd/tbd-workshop-1.
+
+5. Provision your infrastructure.
 
     a) setup Vertex AI Workbench `pyspark` kernel as described in point [8](https://github.com/bdg-tbd/tbd-workshop-1/tree/v1.0.32#project-setup) 
 
     b) upload [tpc-di-setup.ipynb](https://github.com/bdg-tbd/tbd-workshop-1/blob/v1.0.36/notebooks/tpc-di-setup.ipynb) to 
 the running instance of your Vertex AI Workbench
 
-5. In `tpc-di-setup.ipynb` modify cell under section ***Clone tbd-tpc-di repo***:
+6. In `tpc-di-setup.ipynb` modify cell under section ***Clone tbd-tpc-di repo***:
 
    a)first, fork https://github.com/mwiewior/tbd-tpc-di.git to your github organization.
 
@@ -49,7 +52,7 @@ the running instance of your Vertex AI Workbench
  
 
 
-6. Access Vertex AI Workbench and run cell by cell notebook `tpc-di-setup.ipynb`.
+7. Access Vertex AI Workbench and run cell by cell notebook `tpc-di-setup.ipynb`.
 
     a) in the first cell of the notebook replace: `%env DATA_BUCKET=tbd-2023z-9910-data` with your data bucket.
 
@@ -77,19 +80,36 @@ the running instance of your Vertex AI Workbench
 
 7. Explore files created by generator and describe them, including format, content, total size.
 
-   ***Files desccription***
+   The data in the path /tmp/tpc-di have extensions: .txt, .csv. Batch1 generated around 9.5GB, Batch2 and Batch3 have around 220MB.
 
-8. Analyze tpcdi.py. What happened in the loading stage?
+   ![img.png](figures/extensions.png)
 
-   ***Your answer***
+   In the digen_report.txt we can see information about the quantity of records for each batch.
+    ![img.png](figures/extensions2.png)
 
-9. Using SparkSQL answer: how many table were created in each layer?
+9. Analyze tpcdi.py. What happened in the loading stage?
 
-   ***SparkSQL command and output***
+  In this step, the data was sent to cloud storage.
 
-10. Add some 3 more [dbt tests](https://docs.getdbt.com/docs/build/tests) and explain what you are testing. ***Add new tests to your repository.***
+    ![img.png](figures/zasobnik.png)
+     ![img.png](figures/table.png)
+   
+
+11. Using SparkSQL answer: how many table were created in each layer?
+
+![img.png](figures/43table.png)
+![img.png](figures/layertable.png)
+
+
+11. Add some 3 more [dbt tests](https://docs.getdbt.com/docs/build/tests) and explain what you are testing. ***Add new tests to your repository.***
 
    ***Code and description of your tests***
+
+   airflow_monitoring – checks the overall health of the Airflow environment (e.g. whether tasks are starting and executing according to schedule).
+
+  composer_sample_dbt_task – demonstrates integration with DBT (Data Build Tool), verifying whether data processing can be properly started and monitored using DBT in Airflow.
+
+  dataproc_job – tests the ability to delegate tasks to Dataproc, i.e. whether Airflow can properly establish communication and start jobs in the Dataproc cluster.
 
 11. In main.tf update
    ```
@@ -100,4 +120,4 @@ the running instance of your Vertex AI Workbench
 
 12. Redeploy infrastructure and check if the DAG finished with no errors:
 
-***The screenshot of Apache Aiflow UI***
+![img.png](figures/DAG.png)

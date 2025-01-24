@@ -30,4 +30,9 @@ in profiles.yml.
 5. Analyze the performance and scalability of execution times of each model. Visualize and discucss the final results.
 
 
+We changed the code, but we were unable to perform the analysis due to a problem with the last step of phase2a. 
+Using two executors instead of one may result in a noticeable performance improvement, but using 5 can be expensive solution.
+
+
+
    

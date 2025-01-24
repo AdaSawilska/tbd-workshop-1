@@ -19,7 +19,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
   ![img.png](doc/figures/discounts.png)
 
 5. From avaialble Github Actions select and run destroy on main branch.
-![img.png](figures/destroy.png)
+  ![img.png](figures/destroy.png)
    
    
 7. Create new git branch and:
@@ -47,7 +47,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
     3. List of buckets for disposal
     4. Description of network communication (ports, why it is necessary to specify the host for the driver) of Apache Spark running from Vertex AI Workbech
   
-    ***place your diagram here***
+     ![img.png](figures/diagram.png)
 
 12. Create a new PR and add costs by entering the expected consumption into Infracost
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
@@ -66,27 +66,41 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 
   
 13. Start an interactive session from Vertex AI workbench:
+  ```bash
   gcloud compute --project "tbd-2024l-300466" ssh --zone "europe-west1-b" "tbd-2024l-300466-notebook" -- -L 8080:localhost:8080
-     ![img.png](figures/notebook.png)
+  ```
+
+
+  ![img.png](figures/notebook.png)
    
-14. Find and correct the error in spark-job.py
+15. Find and correct the error in spark-job.py
 
-    ***describe the cause and how to find the error***
+    The path to the bucket in spark-job.py was incorrect
 
-15. Additional tasks using Terraform:
+16. Additional tasks using Terraform:
 
     1. Add support for arbitrary machine types and worker nodes for a Dataproc cluster and JupyterLab instance
 
-    ***place the link to the modified file and inserted terraform code***
+    ```bash
+    https://github.com/AdaSawilska/tbd-workshop-1/commit/f50cbe9fb5d277e0c47892256a638dd89f5078f3
+    ```
     
-    3. Add support for preemptible/spot instances in a Dataproc cluster
+    2. Add support for preemptible/spot instances in a Dataproc cluster
 
-    ***place the link to the modified file and inserted terraform code***
+    ```bash
+    https://github.com/AdaSawilska/tbd-workshop-1/commit/76205e8b95433f9876cc2577c25c3e2234aa072d
+    ```
     
     3. Perform additional hardening of Jupyterlab environment, i.e. disable sudo access and enable secure boot
-    
-    ***place the link to the modified file and inserted terraform code***
+
+    ```bash
+    https://github.com/AdaSawilska/tbd-workshop-1/commit/2449c5c7b84f2ddc88512fecadea8c447cc25956
+    ```
 
     4. (Optional) Get access to Apache Spark WebUI
 
-    ***place the link to the modified file and inserted terraform code***
+    ```bash
+    https://github.com/AdaSawilska/tbd-workshop-1/commit/40cf04c8b8abcccafc1fee1fb425ad0b646c78e3
+    ```
+
+     ![img.png](figures/spark.png)
