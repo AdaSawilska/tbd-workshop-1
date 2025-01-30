@@ -88,9 +88,10 @@ the running instance of your Vertex AI Workbench
    In the digen_report.txt we can see information about the quantity of records for each batch.
     ![img.png](figures/extensions2.png)
 
-9. Analyze tpcdi.py. What happened in the loading stage?
+8. Analyze tpcdi.py. What happened in the loading stage?
 
-  In this step, the data was sent to cloud storage.
+In this step, the data was sent to cloud storage. The ```tpcdi.py``` file is responsible for creating tables based on data from the generator during the loading stage. Initially, a Spark session is established, and the necessary databases are created, with ```digen``` set as the default database. Each table’s structure is defined, and data is loaded directly from files. Using this data, DataFrame structures are created and then saved in Parquet format, forming tables within the ```digen``` database.
+
 
    ![img.png](figures/zasobnik.png)
 
@@ -98,7 +99,14 @@ the running instance of your Vertex AI Workbench
    ![img.png](figures/table.png)
    
 
-11. Using SparkSQL answer: how many table were created in each layer?
+9. Using SparkSQL answer: how many table were created in each layer?
+
+   The overall number of created tables is 43. Number of tables created in each layer:
+   * demo_bronze: 17
+   * demo_silver: 14
+   * demo_gold: 12
+
+   No tables were created in the bronze, silver, or gold layers.
 
 ![img.png](figures/43tables.png)
 
@@ -106,7 +114,7 @@ the running instance of your Vertex AI Workbench
 ![img.png](figures/layertable.png)
 
 
-11. Add some 3 more [dbt tests](https://docs.getdbt.com/docs/build/tests) and explain what you are testing. ***Add new tests to your repository.***
+10. Add some 3 more [dbt tests](https://docs.getdbt.com/docs/build/tests) and explain what you are testing. ***Add new tests to your repository.***
 
    ***Code and description of your tests***
    
