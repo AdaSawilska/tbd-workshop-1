@@ -81,14 +81,22 @@ the running instance of your Vertex AI Workbench
 
 7. Explore files created by generator and describe them, including format, content, total size.
 
-   The data in the path /tmp/tpc-di have extensions: .txt, .csv. Batch1 generated around 9.5GB, Batch2 and Batch3 have around 220MB.
+The data in the path /tmp/tpc-di are folders Batch1, Batch2, and Batch3, which contain a mix of different types of files, mainly .txt and .csv. Most of these files are about trading activities over a certain period. Batch1 generated around 9.5GB, Batch2 and Batch3 have around 220MB. The biggest files store traiding history:
+   * DailyMarket.txt - 3 G
+   * WatchHistory.txt -  1.4 G
+   * Trade.txt - 1.3 G
+   * CashTransaction.txt - 1.1 G
+   * TradeHistory.txt - 1.1 G
 
    ![img.png](figures/extensions.png)
 
    In the digen_report.txt we can see information about the quantity of records for each batch.
     ![img.png](figures/extensions2.png)
 
-8. Analyze tpcdi.py. What happened in the loading stage?
+   Directioes contain multiple FINWIRE files with size in range from 900KB to 70KB. Raw data and metadata are stored separately, which makes it harder to analyze. A tool like dbt (Data Build Tool) is helpful to 
+   organize and prepare this data for analysis.
+
+9. Analyze tpcdi.py. What happened in the loading stage?
 
 In this step, the data was sent to cloud storage. The ```tpcdi.py``` file is responsible for creating tables based on data from the generator during the loading stage. Initially, a Spark session is established, and the necessary databases are created, with ```digen``` set as the default database. Each table’s structure is defined, and data is loaded directly from files. Using this data, DataFrame structures are created and then saved in Parquet format, forming tables within the ```digen``` database.
 
